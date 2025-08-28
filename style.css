@@ -1,0 +1,111 @@
+/* Basic Reset and Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    transition: background 0.5s ease-in-out;
+}
+
+/* Main App Container */
+.app-container {
+    width: 100%;
+    max-width: 450px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+}
+
+.app-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#city-input {
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+}
+
+#search-btn {
+    border: none;
+    background: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-btn:hover {
+    background: #0056b3;
+}
+
+/* Unit Toggle */
+.unit-toggle {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #333;
+}
+.unit-toggle input {
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+/* Weather Display Area */
+.weather-display-container {
+    text-align: center;
+}
+
+/* === ADDED: STYLES FOR DYNAMIC WEATHER CONTENT === */
+.weather-display-container h2 { font-size: 1.8em; margin-bottom: 10px; }
+.weather-display-container .temp { font-size: 4em; font-weight: 600; }
+.weather-display-container .feels-like { margin-top: -10px; margin-bottom: 15px; color: #555; }
+.weather-display-container .description { text-transform: capitalize; font-style: italic; }
+
+.details-container, .sun-times-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    background: rgba(0,0,0,0.05);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* === ADDED: MAP STYLES (HEIGHT IS REQUIRED) === */
+#map {
+    height: 220px;
+    margin-top: 25px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Message Styles */
+.message { padding: 10px; border-radius: 5px; margin-top: 10px; }
+.message.error { background-color: #f8d7da; color: #721c24; }
+.message.loading { background-color: #e2e3e5; color: #383d41; }
+.message.info { background-color: #d1ecf1; color: #0c5460; }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtmoSphere Weather</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <h1 class="app-title">AtmoSphere</h1>
+
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Enter a city..." autocomplete="off">
+            <button id="search-btn">Get Weather</button>
+        </div>
+        
+        <div class="unit-toggle">
+            <label>
+                <input type="checkbox" id="unit-toggle">
+                Show in °F
+            </label>
+        </div>
+
+        <div id="weather-display" class="weather-display-container">
+            </div>
+
+        <div id="map"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
